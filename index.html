@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Steganography</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- CryptoJS CDN for AES encryption -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 AES + Steganography</h1>
+
+    <label>Upload Image (PNG):</label>
+   <input type="file" id="imageInput" accept="image/png"><br>
+
+    <textarea id="message" placeholder="Enter secret message here..."></textarea><br>
+    <input type="password" id="password" placeholder="Enter password"><br>
+    
+    <button onclick="encode()">Encode Message</button>
+    <button onclick="decode()">Decode Message</button><br>
+<button onclick="downloadImage()">Download Encoded Image</button><br>
+
+    <canvas id="canvas" hidden></canvas>
+    <img id="outputImage"><br>
+    <p id="decodedMessage"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
